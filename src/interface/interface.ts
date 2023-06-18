@@ -11,3 +11,9 @@ export interface IUser extends Document {
     password: string;
     posts: mongoose.Types.ObjectId[];
 } 
+export interface Contact extends Document {
+    username: string;
+    email: string;
+    phone: string;
+    message: string;
+}

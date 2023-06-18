@@ -4,9 +4,7 @@ import User from '../schemas/User.schema.js';
 import { sendConfirmationEmail } from '../utils/nodemailer.js';
 import { JWT } from '../utils/jwt.js';
 import sha256 from "sha256"
-import redis from "redis";
-const client = redis.createClient();
-client.connect();
+import { client } from "../db/redis.js"
 class UserController {
     // Yeni foydalanuvchi qo'shish 
     async createUser(req: Request, res: Response) {

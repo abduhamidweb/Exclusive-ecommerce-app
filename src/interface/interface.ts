@@ -17,3 +17,6 @@ export interface Contact extends Document {
     phone: string;
     message: string;
 }
+export interface Img extends Document {
+    imgLink: string;
+}
